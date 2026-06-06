@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messaging cdr</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- Info Message -->
+    <div class="infoMsg" title="Close">
+      <div class="msg"></div>
+    </div>
+
+    <div class="addConvPopup">
+      <div class="title"></div>
+      <input type="text" id="convIdInp" placeholder="Enter Conversation id...">
+      <div class="btns">
+        <div class="btn addBtn material-symbols-outlined">check</div>
+        <div class="btn closeBtn material-symbols-outlined">close</div>
+      </div>
+    </div>
+
+    <div class="optionsMenu">
+      <div class="option deleteConv">
+        <span class="material-symbols-outlined">delete</span>
+        <span>Delete Conversation</span>
+      </div>
+      <div class="option copyConvId">
+        <span class="material-symbols-outlined">content_copy</span>
+        <span>Copy Conversation ID</span>
+      </div>
+    </div>
+    
+    
+    <div class="convContainer">
+      <div class="top">
+        <span>Conversations:</span>
+      </div>
+      <div class="convs"></div>
+
+      <div class="newConv convBtnContainer" title="Create new conversation">
+        <div class="newConvBtn btn material-symbols-outlined">add_comment</div>
+      </div>
+      <div class="joinConv convBtnContainer" title="Join a conversation">
+        <div class="joinConvBtn btn material-symbols-outlined">person_add</div>
+      </div>
+    </div>
+
+    <div class="app">
+      <div class="info">
+        <div class="uid"></div>
+      </div>
+
+      <div class="top">
+        <div class="messageContainer">
+          <p>NO CONVERSATION SELECTED!</p>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <textarea id="queryInp" placeholder="Enter your message..."></textarea>
+        <div class="sendBtn disabled">
+          <span class="material-symbols-outlined">send</span>
+        </div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
